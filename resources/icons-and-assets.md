@@ -17,9 +17,3 @@ Material icons for app and dashboard UI.
 https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/
 
 Collection of sample SVG files.
-
-### Example SVG
-
-https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/wp.svg
-
-Simple SVG example file.

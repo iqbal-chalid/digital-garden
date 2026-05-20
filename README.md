@@ -4,24 +4,30 @@ A collection of developer notes, resources, snippets, and interesting discoverie
 
 ---
 
-## AI-Assisted Development
+## Topics
 
-- [FlutterFlow AI Development](./ai-assisted-development/flutterflow-ai-development.md)
+- [FlutterFlow AI Development](./topics/flutterflow-ai-development.md)
   - Building FlutterFlow apps with AI using the official MCP server.
-
-- [Design Systems Directory](https://designdotmd.directory/)
-  - Directory of `DESIGN.md` files for coding agents.
 
 ---
 
-## Quick Links
+## AI References & Prompting
 
-- [Google Material Icons](https://fonts.google.com/icons)
-  - Material icons for app and dashboard UI.
+- [designdotmd](https://designdotmd.directory/)
+  - Collection of `DESIGN.md` files that provide a strong foundation for AI-assisted design prompting, design systems, and visual direction.
 
 ---
 
 ## Resources
 
 - [Icons & Assets](./resources/icons-and-assets.md)
-  - SVG samples, icons, and visual assets.
+- [Tools](./resources/tools.md)
+
+---
+
+## Quick Links
+
+- [FlutterFlow](https://app.flutterflow.io/)
+- [FlutterFlow Designer](https://designer.flutterflow.io/)
+- [Google Material Icons](https://fonts.google.com/icons)
+- [jitter.video](https://jitter.video/)
