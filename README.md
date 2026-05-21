@@ -24,6 +24,8 @@ A collection of developer notes, resources, snippets, and interesting discoverie
 - [Tools](./resources/tools.md)
 - [UI/UX References](./resources/ui-ux-references.md)
   - Collection of UI inspirations and good free Figma designs.
+- [Online Playgrounds](./resources/online-playgrounds.md)
+  - Browser-based playgrounds and sandbox environments for quick experimentation and prototyping.
 
 ---
 
@@ -32,5 +34,6 @@ A collection of developer notes, resources, snippets, and interesting discoverie
 - [FlutterFlow](https://app.flutterflow.io/)
 - [FlutterFlow Designer](https://designer.flutterflow.io/)
 - [Visily](https://www.visily.ai/)
+- [Tailwind Play](https://play.tailwindcss.com/)
 - [Google Material Icons](https://fonts.google.com/icons)
 - [jitter.video](https://jitter.video/)
