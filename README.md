@@ -22,10 +22,14 @@ A collection of developer notes, resources, snippets, and interesting discoverie
 
 - [Icons & Assets](./resources/icons-and-assets.md)
 - [Tools](./resources/tools.md)
+- [Python Packages](./resources/python-packages.md)
+  - Collection of useful Python packages, frameworks, and libraries.
 - [UI/UX References](./resources/ui-ux-references.md)
   - Collection of UI inspirations and good free Figma designs.
 - [Online Playgrounds](./resources/online-playgrounds.md)
   - Browser-based playgrounds and sandbox environments for quick experimentation and prototyping.
+- [Downloads](./resources/downloads.md)
+  - Collection of downloadable software and desktop utilities commonly used in development and content workflows.
 
 ---
 
