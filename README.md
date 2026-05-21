@@ -20,24 +20,27 @@ A collection of developer notes, resources, snippets, and interesting discoverie
 
 ## Resources
 
-- [Icons & Assets](./resources/icons-and-assets.md)
-- [Tools](./resources/tools.md)
-- [Python Packages](./resources/python-packages.md)
-  - Collection of useful Python packages, frameworks, and libraries.
-- [UI/UX References](./resources/ui-ux-references.md)
-  - Collection of UI inspirations and good free Figma designs.
-- [Online Playgrounds](./resources/online-playgrounds.md)
-  - Browser-based playgrounds and sandbox environments for quick experimentation and prototyping.
+- [CLI Snippets](./resources/cli-snippets.md)
+  - Collection of useful command-line snippets for development and productivity.
 - [Downloads](./resources/downloads.md)
   - Collection of downloadable software and desktop utilities commonly used in development and content workflows.
+- [Icons & Assets](./resources/icons-and-assets.md)
+- [Online Playgrounds](./resources/online-playgrounds.md)
+  - Browser-based playgrounds and sandbox environments for quick experimentation and prototyping.
+- [Python Packages](./resources/python-packages.md)
+  - Collection of useful Python packages, frameworks, and libraries.
+- [Tools](./resources/tools.md)
+- [UI/UX References](./resources/ui-ux-references.md)
+  - Collection of UI inspirations and good free Figma designs.
 
 ---
 
 ## Quick Links
 
+## Quick Links
+
 - [FlutterFlow](https://app.flutterflow.io/)
 - [FlutterFlow Designer](https://designer.flutterflow.io/)
-- [Visily](https://www.visily.ai/)
-- [Tailwind Play](https://play.tailwindcss.com/)
 - [Google Material Icons](https://fonts.google.com/icons)
 - [jitter.video](https://jitter.video/)
+- [Tailwind Play](https://play.tailwindcss.com/)
