@@ -22,6 +22,8 @@ A collection of developer notes, resources, snippets, and interesting discoverie
 
 - [Icons & Assets](./resources/icons-and-assets.md)
 - [Tools](./resources/tools.md)
+- [UI/UX References](./resources/ui-ux-references.md)
+  - Collection of UI inspirations and good free Figma designs.
 
 ---
 
@@ -29,5 +31,6 @@ A collection of developer notes, resources, snippets, and interesting discoverie
 
 - [FlutterFlow](https://app.flutterflow.io/)
 - [FlutterFlow Designer](https://designer.flutterflow.io/)
+- [Visily](https://www.visily.ai/)
 - [Google Material Icons](https://fonts.google.com/icons)
 - [jitter.video](https://jitter.video/)
