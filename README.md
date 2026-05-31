@@ -8,6 +8,8 @@ A collection of developer notes, resources, snippets, and interesting discoverie
 
 - [FlutterFlow AI Development](./topics/flutterflow-ai-development.md)
   - Building FlutterFlow apps with AI using the official MCP server.
+- [Maritime](./content/maritime.md)
+  - Notes, references, ideas, and projects related to maritime technology.
 
 ---
 
