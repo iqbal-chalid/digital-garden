@@ -46,3 +46,16 @@ Online motion design and animation tool for creating UI animations and visual co
 - The UI feels much more intuitive compared to https://lottiefiles.com/.
 - It may not be as advanced, but it seems sufficient for most common animation needs.
 - The free tier is relatively generous.
+
+## 3D Model Tools
+
+### glTF.report
+
+- https://gltf.report/
+
+Online tool for inspecting and fixing GLB/glTF 3D models.
+
+#### Personal Notes
+
+- I use this tool to fix GLB files before displaying them on Mapbox maps.
+- It helped resolve positioning issues when rendering GLB models on top of the map.
