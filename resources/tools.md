@@ -59,3 +59,11 @@ Online tool for inspecting and fixing GLB/glTF 3D models.
 
 - I use this tool to fix GLB files before displaying them on Mapbox maps.
 - It helped resolve positioning issues when rendering GLB models on top of the map.
+
+## Diagramming / Whiteboard
+
+### Excalidraw
+
+- https://excalidraw.com/
+
+Virtual whiteboard for creating hand-drawn style diagrams, architecture sketches, workflows, and system designs.
