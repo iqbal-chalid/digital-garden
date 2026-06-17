@@ -60,6 +60,18 @@ Online tool for inspecting and fixing GLB/glTF 3D models.
 - I use this tool to fix GLB files before displaying them on Mapbox maps.
 - It helped resolve positioning issues when rendering GLB models on top of the map.
 
+### Babylon.js Sandbox
+
+- https://sandbox.babylonjs.com/
+
+Online 3D model viewer and testing environment for GLB/glTF files.
+
+#### Personal Notes
+
+- Very useful for quickly previewing GLB models without installing any software.
+- Supports drag-and-drop loading of GLB files.
+- Allows inspecting animations, materials, lighting, and model hierarchy.
+
 ## Diagramming / Whiteboard
 
 ### Excalidraw
