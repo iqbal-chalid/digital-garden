@@ -79,3 +79,32 @@ Online 3D model viewer and testing environment for GLB/glTF files.
 - https://excalidraw.com/
 
 Virtual whiteboard for creating hand-drawn style diagrams, architecture sketches, workflows, and system designs.
+
+## Development & Networking
+
+### Cloudflared
+
+- https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/
+
+Cloudflare Tunnel client for securely exposing local services to the internet without opening firewall ports.
+
+Useful for:
+
+- Testing local APIs with FlutterFlow
+- Sharing local development servers
+- Temporary public URLs for demos
+- Replacing ngrok for API testing
+
+Example:
+
+```bash
+cloudflared tunnel --url http://localhost:8000
+```
+
+Generates a temporary public URL:
+
+```text
+https://example.trycloudflare.com
+```
+
+which can be used by FlutterFlow, mobile devices, and external services to access a local development server.
