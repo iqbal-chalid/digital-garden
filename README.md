@@ -30,6 +30,7 @@ A collection of developer notes, resources, snippets, and interesting discoverie
 - [Online Playgrounds](./resources/online-playgrounds.md)
   - Browser-based playgrounds and sandbox environments for quick experimentation and prototyping.
 - [Python Code Review](./resources/python-code-review.md)
+- [Python Codes](./python_codes/debug.md)
 - [Python Packages](./resources/python-packages.md)
   - Collection of useful Python packages, frameworks, and libraries.
 - [Tools](./resources/tools.md)
