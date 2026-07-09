@@ -1,44 +1,43 @@
 # Debug Utility
 
-A lightweight debugging helper for Python that focuses on **visual tracing** rather than full-featured logging.
+A lightweight debugging helper for Python that focuses on **understanding code execution**, especially algorithms and recursive functions.
 
-The goal is to make it easy to understand recursive algorithms, sorting algorithms, tree traversals, graph searches, or any complex execution flow by producing readable, indented output.
+Unlike Python's `logging` module, this utility is designed to be **temporary**. It helps visualize execution flow while developing or debugging and is intended to be removed once the problem is solved.
+
+> Think of it as a **debugging scalpel**, not a logging framework.
 
 ---
 
 # Philosophy
 
-Instead of writing many `print()` statements such as
+This utility was created to answer questions like:
 
-```python
-print("Enter function")
-print(i)
-print(arr)
-print(result)
-```
+- Which function is currently executing?
+- How deep is the recursion?
+- Which values changed?
+- Which branch was taken?
+- What does the algorithm look like while running?
 
-this helper provides a consistent interface that automatically handles
-
-- indentation
-- function hierarchy
-- colored output
-- variable formatting
-- execution counter
-- list comparison
-
-It is designed for developers who want to debug algorithms quickly without setting up a debugger.
+Instead of stepping through a debugger repeatedly, the execution becomes a readable trace.
 
 ---
 
 # Features
 
-- Automatic indentation
 - Function call tracing
-- Colored messages
+- Automatic indentation
+- Recursion level display
+- Function call counter
+- Global call counter
+- Colored output
 - Variable printing
+- Condition highlighting
 - List difference visualization
-- Enable/disable debugging
-- Print counter
+- List element highlighting
+- Execution time measurement
+- Function decorator
+- Debug summary
+- Enable / disable debugging
 
 ---
 
@@ -52,198 +51,148 @@ DX = Debug()
 
 ---
 
-# Function Reference
+# Function Tracing
 
-## fx(message)
+## fx()
 
 Marks the beginning of a function.
-
-- Prints the function name in cyan.
-- Automatically increases indentation.
 
 ```python
 DX.fx("partition")
 ```
 
-Output
+Example output
 
 ```
-Fx: partition
+0|Fx: quick_sort -> F1 : G1
+  1|Fx: partition -> F1 : G2
+    2|Fx: quick_sort -> F2 : G3
 ```
 
-Nested calls become
+Where
 
-```
-Fx: quick_sort
-  Fx: partition
-    Fx: quick_sort
+- **Level** = recursion depth
+- **F** = number of calls for that function
+- **G** = global function call number
+
+---
+
+# Printing
+
+## print()
+
+```python
+DX.print("Hello")
 ```
 
 ---
 
-## print(message)
-
-Prints a message using the current indentation.
-
-```python
-DX.print("Processing...")
-```
-
-Output
-
-```
-  Processing...
-```
-
----
-
-## print_val(variable, value)
-
-Prints a variable name and value.
-
-```python
-DX.print_val("i", i)
-```
-
-Output
-
-```
-i : 3
-```
-
-Example
+## print_val()
 
 ```python
 DX.print_val("pivot", pivot)
-DX.print_val("array", arr)
 ```
 
 Output
 
 ```
-pivot : 10
-array : [8, 3, 5]
+pivot : 8
 ```
 
 ---
 
-## print_cyan(message)
+## print_condition()
 
-Prints text in cyan.
+Useful for visualizing conditions.
 
 ```python
-DX.print_cyan("Start")
+DX.print_condition("low < high", low < high)
 ```
 
-Useful for
+Output
 
-- headers
-- entering functions
-- important milestones
+```
+low < high
+```
+
+The text is printed
+
+- green when True
+- red when False
 
 ---
 
-## print_green(message)
+# Colored Messages
 
-Prints text in green.
-
-```python
-DX.print_green("Condition satisfied")
-```
-
-Useful for
-
-- successful conditions
-- positive paths
-
----
-
-## print_red(message)
-
-Prints text in red.
+## print_cyan()
 
 ```python
-DX.print_red("Condition failed")
+DX.print_cyan("Partition")
 ```
 
 Useful for
 
-- failed conditions
-- unexpected branches
-- error diagnostics
+- titles
+- function entries
+- milestones
 
 ---
 
-## inc()
-
-Manually increases indentation.
+## print_green()
 
 ```python
-DX.inc()
-```
-
-Usually you don't need to call this because `fx()` already does it.
-
----
-
-## dec()
-
-Removes one indentation level.
-
-```python
-DX.dec()
-```
-
-Useful when manually managing nested blocks.
-
----
-
-## ON()
-
-Enables all debug output.
-
-```python
-DX.ON()
+DX.print_green("Success")
 ```
 
 ---
 
-## OFF()
-
-Disables all debug output.
+## print_red()
 
 ```python
-DX.OFF()
+DX.print_red("Failed")
+```
+
+---
+
+# Lists
+
+## print_list()
+
+Highlights one element or a range of elements.
+
+Highlight a single element
+
+```python
+DX.print_list("array", arr, 3)
+```
+
+Highlight a range
+
+```python
+DX.print_list("array", arr, [2, 5])
 ```
 
 Example
 
-```python
-DX.fx("quick_sort")
-DX.OFF()
-
-...
+```
+array : [8, 3, 1, 7, 0, 10, 2]
 ```
 
-Nothing is printed after `OFF()` until `ON()` is called.
-
----
-
-## get_counter()
-
-Returns the number of printed debug messages.
-
-```python
-count = DX.get_counter()
-```
+where the selected elements are displayed in green.
 
 ---
 
 ## print_list_diff()
 
-Compares two lists and highlights changed elements.
+Displays two versions of a list while highlighting changed values.
 
 ```python
+before = arr.copy()
+
+...
+
+after = arr.copy()
+
 DX.print_list_diff(
     "array",
     after,
@@ -265,146 +214,241 @@ After
 [3, 8, 1, 7]
 ```
 
+Only the modified values are highlighted.
+
+This is especially useful for
+
+- Quick Sort
+- Merge Sort
+- Heap Sort
+- Dynamic Programming
+- State transitions
+
+---
+
+# Summary
+
+## print_summary()
+
+Prints a dictionary as a formatted summary.
+
+```python
+params = {
+    "arr": arr,
+    "len(arr)": len(arr),
+}
+
+DX.print_summary("INPUT", params)
+```
+
 Output
 
 ```
-array : [3, 8, 1, 7]
+INPUT
+arr : [8, 3, 1, 7]
+len(arr) : 4
+----------------------------------------
 ```
 
-where only modified elements are printed in green.
+Useful for displaying
 
-This is especially useful when debugging
+- function inputs
+- configuration
+- important state
 
-- sorting algorithms
-- dynamic programming tables
-- graph updates
-- state transitions
+---
+
+# Enable / Disable
+
+## ON()
+
+Enable debugging.
+
+```python
+DX.ON()
+```
+
+---
+
+## OFF()
+
+Disable debugging.
+
+```python
+DX.OFF()
+```
+
+This allows temporary debugging without deleting the statements.
+
+---
+
+# Decorator
+
+The utility also provides a decorator for tracing functions automatically.
+
+Example
+
+```python
+@DX.debug(
+    show_elapsed=True,
+    show_args=True,
+    show_return=True,
+)
+def partition(arr, low, high):
+    ...
+```
+
+Available options
+
+| Option       | Description                      |
+| ------------ | -------------------------------- |
+| show_elapsed | Display execution time           |
+| show_args    | Display function arguments       |
+| show_return  | Display returned value           |
+| name         | Override displayed function name |
+
+Example output
+
+```
+0|Fx: partition -> F1 : G1
+
+args : ([8,3,1], 0, 2)
+
+...
+
+⏱️ partition -- elapsed : 0.000013 sec (G1)
+
+return : 2
+```
+
+---
+
+# Utility Functions
+
+## line()
+
+Prints a separator.
+
+```python
+DX.line()
+```
+
+Output
+
+```
+--------------------------------------------------------------------------------
+```
+
+Custom length
+
+```python
+DX.line(40)
+```
+
+---
+
+## space()
+
+Prints a blank line.
+
+```python
+DX.space()
+```
+
+---
+
+## reset()
+
+Resets all internal counters and state.
+
+```python
+DX.reset()
+```
+
+Resets
+
+- indentation
+- recursion level
+- print counter
+- function counters
+- global counters
 
 ---
 
 # Example
 
-Quick Sort
-
 ```python
 def partition(arr, low, high):
+
     DX.fx("partition")
 
     pivot = arr[high]
 
-    DX.print(f"{low = }")
-    DX.print(f"{high = }")
-    DX.print(f"{pivot = }")
+    DX.print(f"{low=} {high=} {pivot=}")
 
-    DX.print_val("array", arr)
+    DX.print_val("i", i)
+
+    before = arr.copy()
 
     ...
+
+    after = arr.copy()
+
+    DX.print_list_diff(
+        "arr",
+        after,
+        before
+    )
 ```
 
-Output
+Produces output similar to
 
 ```
 Fx: partition
-  low = 0
-  high = 6
-  pivot = 2
-  array : [8, 3, 1, 7, 0, 10, 2]
+
+low=0 high=6 pivot=2
+
+i : -1
+
+arr :
+[1, 0, 8, 7, 3, 10, 2]
+
+arr :
+[1, 0, 2, 7, 3, 10, 8]
 ```
 
 ---
 
 # Typical Usage
 
-```python
-def dfs(node):
-    DX.fx("dfs")
-
-    DX.print_val("node", node)
-
-    for child in node.children:
-        dfs(child)
-
-    DX.dec()
-```
-
-Output
-
-```
-Fx: dfs
-  node : A
-  Fx: dfs
-    node : B
-    Fx: dfs
-      node : D
-```
-
-The indentation immediately reveals the recursive call hierarchy.
-
----
-
-# Recommended Workflow
-
-1. Create a single global debugger.
-
-```python
-DX = Debug()
-```
-
-2. Add `DX.fx()` at the beginning of important functions.
-
-3. Print important variables using
-
-```python
-DX.print_val(...)
-```
-
-instead of raw `print()`.
-
-4. Use colored output to distinguish
-
-- successful conditions
-- failures
-- milestones
-
-5. Disable debugging by calling
-
-```python
-DX.OFF()
-```
-
-instead of removing print statements.
-
----
-
-# Best Use Cases
-
-This utility is particularly useful for learning and debugging algorithms such as
+This utility works particularly well for
 
 - Quick Sort
 - Merge Sort
-- Heap Sort
 - Binary Search
 - DFS
 - BFS
 - Dijkstra
-- Dynamic Programming
+- A\*
 - Tree Traversal
 - Backtracking
-- Recursion
-- Parsing algorithms
+- Dynamic Programming
+- Graph Algorithms
+- General recursion
 
 ---
 
 # Design Goals
 
-This utility intentionally does **not** try to replace Python's `logging` module.
+This utility intentionally does **not** try to replace the standard `logging` module.
 
-Instead, it aims to provide:
+Instead, it focuses on:
 
-- very small API
-- almost zero setup
-- visually clear output
-- recursion-friendly traces
-- algorithm-oriented debugging
+- minimal API
+- quick instrumentation
+- easy removal
+- readable execution traces
+- recursive algorithm visualization
+- developer productivity
 
-It is intended as a developer productivity tool for understanding code execution rather than for production logging.
+It is designed for the period **between writing the code and deleting the debug statements**.
