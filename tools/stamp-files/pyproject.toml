@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stamp-files"
+version = "1.0.0"
+requires-python = ">=3.9"
+
+[project.scripts]
+stamp-files = "stamp_files.cli:main"

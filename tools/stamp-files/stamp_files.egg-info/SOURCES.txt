@@ -1,0 +1,10 @@
+pyproject.toml
+stamp_files/__init__.py
+stamp_files/cli.py
+stamp_files/renamer.py
+stamp_files.egg-info/PKG-INFO
+stamp_files.egg-info/SOURCES.txt
+stamp_files.egg-info/dependency_links.txt
+stamp_files.egg-info/entry_points.txt
+stamp_files.egg-info/top_level.txt
+tests/test_renamer.py

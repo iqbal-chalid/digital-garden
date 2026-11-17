@@ -1,0 +1,2 @@
+[console_scripts]
+stamp-files = stamp_files.cli:main
